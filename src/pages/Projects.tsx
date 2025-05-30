@@ -35,30 +35,6 @@ const Projects = () => {
       demo: 'https://demo.com',
       featured: true
     },
-    {
-      title: 'E-commerce Website',
-      description: 'A full-stack e-commerce website with payment integration.',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-      tags: ['Next.js', 'MongoDB', 'Stripe'],
-      github: 'https://github.com',
-      demo: 'https://demo.com'
-    },
-    {
-      title: 'Weather App',
-      description: 'A weather application that shows current and forecasted weather.',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
-      tags: ['JavaScript', 'API', 'CSS'],
-      github: 'https://github.com',
-      demo: 'https://demo.com'
-    },
-    {
-      title: 'Task Management System',
-      description: 'A productivity tool for managing tasks and projects.',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
-      tags: ['Vue.js', 'Firebase', 'Vuex'],
-      github: 'https://github.com',
-      demo: 'https://demo.com'
-    }
   ];
 
   return (
@@ -70,7 +46,7 @@ const Projects = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">My Projects</h1>
             <p className="text-muted-foreground text-lg">
               A showcase of my technical work, side projects, and experiments.
-              Each project demonstrates different skills and technologies.
+              Each project demonstrates different skills and technologies. More to come!
             </p>
           </div>
 

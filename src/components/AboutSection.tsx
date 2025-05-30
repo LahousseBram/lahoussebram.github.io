@@ -5,12 +5,12 @@ import { Progress } from '@/components/ui/progress';
 
 const AboutSection = () => {
   const skills = [
-    { name: 'JavaScript', proficiency: 90 },
-    { name: 'React', proficiency: 85 },
-    { name: 'TypeScript', proficiency: 80 },
-    { name: 'Node.js', proficiency: 75 },
-    { name: 'Python', proficiency: 70 },
-    { name: 'Machine Learning', proficiency: 65 },
+    { name: 'Python', proficiency: 80 },
+    { name: 'Java', proficiency: 75 },
+    { name: 'Javascript', proficiency: 70 },
+    { name: 'PHP', proficiency: 50 },
+    { name: 'Flutter', proficiency: 50 },
+    { name: 'Typescript', proficiency: 50 },
   ];
 
   return (
@@ -26,12 +26,10 @@ const AboutSection = () => {
               </p>
               <p>
                 My journey in tech began with simple HTML websites, and has grown into
-                a deep expertise in modern web frameworks, backend systems, and machine
-                learning applications.
+                a proficiency in modern web frameworks, backend systems, and multi-environment applications.
               </p>
               <p>
-                When I'm not coding, you can find me exploring new technologies, contributing
-                to open source, or writing technical articles to share my knowledge with others.
+                When I'm not coding, you can find me pondering my next personal project or working out.
               </p>
             </div>
 
@@ -50,7 +48,7 @@ const AboutSection = () => {
                   <Star className="size-8 mx-auto text-primary" />
                 </CardHeader>
                 <CardContent>
-                  <h3 className="text-2xl font-bold">3+</h3>
+                  <h3 className="text-2xl font-bold">5+</h3>
                   <p className="text-muted-foreground">Years Coding</p>
                 </CardContent>
               </Card>
@@ -59,7 +57,7 @@ const AboutSection = () => {
                   <Rocket className="size-8 mx-auto text-primary" />
                 </CardHeader>
                 <CardContent>
-                  <h3 className="text-2xl font-bold">15+</h3>
+                  <h3 className="text-2xl font-bold">10+</h3>
                   <p className="text-muted-foreground">Technologies</p>
                 </CardContent>
               </Card>
@@ -84,13 +82,12 @@ const AboutSection = () => {
               <h3 className="text-2xl font-bold mb-6">Education</h3>
               <Card className="glass-card">
                 <CardHeader>
-                  <CardTitle>Bachelor of Computer Science</CardTitle>
-                  <CardDescription>University Name, 2021-2025</CardDescription>
+                  <CardTitle>Bachelor of Applied Computer Science</CardTitle>
+                  <CardDescription>Howest, 2022-2025 (Present)</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Specialized in software engineering with a focus on web development
-                    and machine learning. Graduating with honors.
+                    Specialized in creating all kinds of software applications ranging from complex web apps to mobile apps.
                   </p>
                 </CardContent>
               </Card>

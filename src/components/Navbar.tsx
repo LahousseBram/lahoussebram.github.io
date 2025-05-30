@@ -30,6 +30,10 @@ const Navbar = () => {
     { name: 'Contact', path: '/contact' }
   ];
 
+  const downloadCV = () => {
+    window.location.assign("../../Assets/cv.pdf")
+  }
+
   return (
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -58,7 +62,7 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button>Download CV</Button>
+            <Button onClick={downloadCV}>Download CV</Button>
           </nav>
         )}
 

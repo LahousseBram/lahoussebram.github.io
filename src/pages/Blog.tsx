@@ -22,20 +22,20 @@ const Blog = () => {
       slug: 'building-portfolio-website'
     },
     {
-      title: 'Machine Learning Fundamentals',
-      excerpt: 'An introduction to machine learning concepts and how to implement your first ML model.',
+      title: 'Returning to my old secondary school to give a lesson about Python',
+      excerpt: 'Find out how a classmate and I returned to our secondary school and taught a class of last year students the Python basics.',
       date: 'May 10, 2025',
       readTime: '8 min read',
       category: 'Machine Learning',
       slug: 'machine-learning-fundamentals'
     },
     {
-      title: 'The Future of Web Development',
-      excerpt: 'Exploring upcoming trends and technologies that will shape the future of web development.',
-      date: 'May 5, 2025',
+      title: 'My Experience at Hack the Future 2024',
+      excerpt: 'A summary about our day visiting Antwerp to participate in a hackaton where we learnt a new technology and managed to place 3rd.',
+      date: 'November 19, 2024',
       readTime: '6 min read',
-      category: 'Technology',
-      slug: 'future-web-development'
+      category: 'Events',
+      slug: 'events'
     },
     {
       title: 'Understanding Data Structures',
@@ -66,11 +66,7 @@ const Blog = () => {
   const categories = [
     'All',
     'Web Development',
-    'Machine Learning',
-    'Technology',
-    'Computer Science',
-    'JavaScript',
-    'TypeScript'
+    'Events',
   ];
 
   const [activeCategory, setActiveCategory] = useState('All');

@@ -8,27 +8,27 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: 'Portfolio Website',
-      description: 'My personal portfolio website built with React and TailwindCSS.',
+      description: 'This personal portfolio website built with React and TailwindCSS.',
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
       tags: ['React', 'TypeScript', 'TailwindCSS'],
       github: 'https://github.com',
       demo: 'https://demo.com'
     },
     {
-      title: 'Machine Learning Project',
-      description: 'A machine learning model to predict stock market trends.',
+      title: 'GoldAuctions platform',
+      description: 'An auction platform for selling jewelery.',
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
-      tags: ['Python', 'TensorFlow', 'Pandas'],
-      github: 'https://github.com',
-      demo: 'https://demo.com'
+      tags: ['Java Spring', 'VueJS'],
+      github: 'https://github.com/LahousseBram/GoldAuctions',
+      demo: 'https://github.com/LahousseBram/GoldAuctions'
     },
     {
-      title: 'Mobile App',
-      description: 'A cross-platform mobile app built with React Native.',
+      title: 'Powerlams website',
+      description: "A website + advanced form system for my parent's business",
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
-      tags: ['React Native', 'Firebase', 'Redux'],
+      tags: ['HTML+CSS', 'Javascript', 'PHP'],
       github: 'https://github.com',
-      demo: 'https://demo.com'
+      demo: 'https://stroomgroepen-lams.be'
     }
   ];
 
@@ -38,7 +38,7 @@ const ProjectsSection = () => {
         <div className="mb-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my recent work and side projects that highlight my skills and interests.
+            These are some of my best projects!
           </p>
         </div>
 
