@@ -14,7 +14,7 @@ const Blog = () => {
   
   const blogPosts = [
     {
-      title: 'Building a Portfolio Website with React',
+      title: 'How I made this website and you can do too',
       excerpt: 'Learn how to create a modern portfolio website using React, TypeScript, and TailwindCSS.',
       date: 'May 15, 2025',
       readTime: '5 min read',
@@ -24,10 +24,10 @@ const Blog = () => {
     {
       title: 'Returning to my old secondary school to give a lesson about Python',
       excerpt: 'Find out how a classmate and I returned to our secondary school and taught a class of last year students the Python basics.',
-      date: 'May 10, 2025',
+      date: 'January 15, 2025',
       readTime: '8 min read',
-      category: 'Machine Learning',
-      slug: 'machine-learning-fundamentals'
+      category: 'Talks',
+      slug: 'python-lesson'
     },
     {
       title: 'My Experience at Hack the Future 2024',
@@ -35,38 +35,31 @@ const Blog = () => {
       date: 'November 19, 2024',
       readTime: '6 min read',
       category: 'Events',
-      slug: 'events'
+      slug: 'hack-the-future'
     },
     {
-      title: 'Understanding Data Structures',
-      excerpt: 'A deep dive into common data structures and their applications in software development.',
+      title: 'Learning from the "best ethical hacker" in Belgium',
+      excerpt: 'Discover what I learnt from the best ethical hacker in Belgium at Howest Bruges',
       date: 'April 28, 2025',
-      readTime: '10 min read',
-      category: 'Computer Science',
-      slug: 'understanding-data-structures'
+      readTime: '5 min read',
+      category: 'Talks',
+      slug: 'ethical-hacker'
     },
     {
-      title: 'JavaScript Design Patterns',
-      excerpt: 'Explore common design patterns and their implementations in JavaScript.',
-      date: 'April 20, 2025',
-      readTime: '7 min read',
-      category: 'JavaScript',
-      slug: 'javascript-design-patterns'
+      title: 'Attending a talk about the newest developments in .NET',
+      excerpt: 'What I learnt while listening to a C# and .NET developer at Starfisk',
+      date: 'October 29, 2024',
+      readTime: '4 min read',
+      category: 'Talks',
+      slug: 'dotnet-development'
     },
-    {
-      title: 'Getting Started with TypeScript',
-      excerpt: 'A beginner-friendly guide to TypeScript and static typing in JavaScript.',
-      date: 'April 15, 2025',
-      readTime: '6 min read',
-      category: 'TypeScript',
-      slug: 'getting-started-typescript'
-    }
   ];
 
   const categories = [
     'All',
     'Web Development',
     'Events',
+    'Talks',
   ];
 
   const [activeCategory, setActiveCategory] = useState('All');
@@ -87,7 +80,7 @@ const Blog = () => {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Blog</h1>
             <p className="text-muted-foreground text-lg mb-12">
-              Thoughts, tutorials, and insights about programming, design, and computer science.
+              This is where I write about some events, tutorials or a random rabbithole I'm diving into.
             </p>
 
             <div className="relative mb-8">

@@ -11,6 +11,11 @@ import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import BlogPostWebsite from "./pages/BlogPostWebsite";
+import BlogPostPython from "./pages/BlogPostPython";
+import BlogPostHackathon from "./pages/BlogPostHackathon";
+import BlogPostHacker from "./pages/BlogPostHacker";
+import BlogPostDotnet from "./pages/BlogPostDotnet";
 
 const queryClient = new QueryClient();
 
@@ -23,11 +28,12 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/blog/building-portfolio-website" element={<BlogPostWebsite />} />
+          <Route path="/blog/python-lesson" element={<BlogPostPython />} />
+          <Route path="/blog/hack-the-future" element={<BlogPostHackathon />} />
+          <Route path="/blog/ethical-hacker" element={<BlogPostHacker />} />
+          <Route path="/blog/dotnet-development" element={<BlogPostDotnet />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

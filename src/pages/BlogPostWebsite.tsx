@@ -11,42 +11,146 @@ const BlogPost = () => {
 
   // This would typically come from a CMS or API
   const post = {
-    title: 'How I wrote this website',
-    date: 'November 19, 2024',
+    title: 'How I made this website and you can do too',
+    date: 'May 15, 2025',
     readTime: '6 min read',
     author: 'Bram Lahousse',
-    category: 'Events',
+    category: 'Web Development',
     content: `
-      <p>
-        The hackathon named 'Hack the Future' took place on the 19th of November 2024. The event started at 9 am but we had to take the train from Bruges at 6:52. This was really early but I met up with some people so this made it more bearable. Once we arrived the entrance was easy to find as there were flags placed outside. We went in through the main entrance and were greeted by some people that gave us a badge. We sat down in the bar area where we had some time to settle down before the briefing. Some time later, the hosts of the event came on stage and welcomed us. They assigned us to our coaches and we went to a separate room. After we sat down and the attendance was taken, they introduced the project itself and asked us some basic questions. After this, we got started laying the foundations for our application.
+      <p class="lead">
+        Creating a portfolio website is an essential step for any developer or designer looking to showcase their work and skills. In this comprehensive guide, we'll walk through how to build a modern, responsive portfolio website using React, TypeScript, and TailwindCSS.
       </p>
-      <br>
+      
+      <h2>Why should I build a portfolio website you may ask.</h2>
+      
       <p>
-        Everything started off well. We worked at a steady pace and morale was high. This continued throughout the first half of the event. At around 12, the coaches told us that we could go to the main hall to enjoy a well-deserved lunch. There was a lunch buffet and we could enjoy some cold drinks. This was a really nice break from the coding that we did in the morning.
+        A well-designed portfolio website serves multiple purposes:
       </p>
-      <br>
+      
+      <ul>
+        <li>Showcases your projects and skills to potential employers</li>
+        <li>Demonstrates your coding abilities and attention to detail</li>
+        <li>Provides a central hub for your online presence</li>
+        <li>Helps you stand out in a competitive job market</li>
+      </ul>
+      
+      <h2>Setting Up Your React Project</h2>
+      
       <p>
-        We got back to work at around 12:30 am. Everything started off well as we continued with confidence. This quickly changed as things started to take a different turn. Some tools that we used decided to give us a hard time and we had to spend around one and a half hours fixing everything. This was very demotivating as we only had around 2 hours left to finish everything we planned.
+        Begin by creating a new React project using Vite, which provides a faster and leaner development experience compared to Create React App:
       </p>
-      <br>
+      
+      <pre><code>npm create vite@latest my-portfolio -- --template react-ts</code></pre>
+      
       <p>
-        We knew this wasn't possible so we had to make a few decisions. We decided to get the core functionalities down first as this was the base of the application and by far the most important. We started preparing ourselves for the pitch we had to give later. We were able to finish a few extra items along with most of the core of the app. We were really close to finishing a major part of the project but due to lack of time this wasn't possible.
+        This command sets up a new React project with TypeScript support. After running this command, navigate to your project directory and install the necessary dependencies:
       </p>
-      <br>
+      
+      <pre><code>
+cd my-portfolio
+npm install
+      </code></pre>
+      
+      <h2>Adding TailwindCSS</h2>
+      
       <p>
-        All of the teams pitched their project and we showed everything we had. We told our fellow colleagues that we had a lot of problems with our tools, which caused our lack of progress during the afternoon. The coaches thanked everyone for their efforts and we left the room to go back to the main hall.
+        TailwindCSS is a utility-first CSS framework that allows for rapid UI development. To add it to your project:
       </p>
-      <br>
+      
+      <pre><code>
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+      </code></pre>
+      
       <p>
-        We gathered our belongings and settled down to enjoy some delicious food and some cold beverages. There were a lot of different food items that we got to eat and I was able to try a few new things. We saw the hosts go on the main stage again and they prepared the last part of the day: giving out the awards. The hosts showed the nominees for the awards and we were the first group they announced. Our hopes were at an all time high but we knew that the struggles we had faced might have cost us a lot of time.
+        Configure your tailwind.config.js file to scan your project files:
       </p>
-      <br>
+      
+      <pre><code>
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+      </code></pre>
+      
+      <h2>Creating the Core Components</h2>
+      
       <p>
-        There were 2 categories: The public vote and the jury's vote. Unfortunately we didn't win any. We were supposed to vote on the 3 best teams and we ended up placing third.
+        For a portfolio website, you'll typically need these key components:
       </p>
+      
+      <ol>
+        <li>Header/Navigation</li>
+        <li>Hero Section</li>
+        <li>Projects Section</li>
+        <li>About Section</li>
+        <li>Skills Section</li>
+        <li>Contact Form</li>
+        <li>Footer</li>
+      </ol>
+      
+      <h2>Adding Animations and Interactions</h2>
+      
+      <p>
+        To make your portfolio stand out, consider adding subtle animations:
+      </p>
+      
+      <pre><code>
+npm install framer-motion
+      </code></pre>
+      
+      <p>
+        Framer Motion provides a simple API for animations in React:
+      </p>
+      
+      <pre><code>
+import { motion } from 'framer-motion';
 
+const ProjectCard = ({ project }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="card"
+    >
+      {/* Project content */}
+    </motion.div>
+  );
+};
+      </code></pre>
+      
+      <h2>Optimization and Deployment</h2>
+      
       <p>
-        We were a bit disappointed but we had to leave soon after as our train was almost arriving. We got a goodie bag after handing in our badge and we returned home right after.
+        Before deploying your portfolio, optimize it for performance:
+      </p>
+      
+      <ul>
+        <li>Optimize images using next-gen formats like WebP</li>
+        <li>Implement lazy loading for components and images</li>
+        <li>Use code splitting to reduce initial load time</li>
+        <li>Set up proper metadata for SEO</li>
+      </ul>
+      
+      <p>
+        For deployment, consider platforms like Vercel, Netlify, or GitHub Pages, which offer free hosting for static websites with continuous deployment from your repository.
+      </p>
+      
+      <h2>Conclusion</h2>
+      
+      <p>
+        Building a portfolio website with React, TypeScript, and TailwindCSS gives you a powerful, flexible foundation to showcase your work. By following the steps outlined in this guide, you can create a professional, responsive portfolio that effectively demonstrates your skills and projects to potential employers or clients.
+      </p>
+      
+      <p>
+        Remember, your portfolio is an evolving project. Continuously update it with new projects, refine the design, and incorporate feedback to make it even better over time.
       </p>
     `,
   };

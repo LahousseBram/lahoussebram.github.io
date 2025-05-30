@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import cvFile from '@/cv.pdf';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,14 +25,17 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Projects', path: '/projects' },
     { name: 'Blog', path: '/blog' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'About', path: '/about' }
   ];
 
   const downloadCV = () => {
-    window.location.assign("../../Assets/cv.pdf")
+    const link = document.createElement('a');
+    link.href = cvFile;
+    link.download = 'Bram_Lahousse_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
   return (
@@ -41,7 +45,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold text-gradient">Portfolio</Link>
+        <Link to="/" className="text-2xl font-bold text-gradient">Bram Lahousse</Link>
         
         {/* Mobile menu button */}
         {isMobile && (
@@ -80,7 +84,7 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button className="mt-2">Download CV</Button>
+              <Button className="mt-2">Download Resume</Button>
             </nav>
           </div>
         )}

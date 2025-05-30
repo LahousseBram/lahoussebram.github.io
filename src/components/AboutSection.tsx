@@ -80,7 +80,7 @@ const AboutSection = () => {
 
             <div className="mt-10">
               <h3 className="text-2xl font-bold mb-6">Education</h3>
-              <Card className="glass-card">
+              <Card className="glass-card mb-4">
                 <CardHeader>
                   <CardTitle>Bachelor of Applied Computer Science</CardTitle>
                   <CardDescription>Howest, 2022-2025 (Present)</CardDescription>
@@ -88,6 +88,17 @@ const AboutSection = () => {
                 <CardContent>
                   <p className="text-muted-foreground">
                     Specialized in creating all kinds of software applications ranging from complex web apps to mobile apps.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="glass-card">
+                <CardHeader>
+                  <CardTitle>IT management</CardTitle>
+                  <CardDescription>Sint-Jozefsinstituut/College, 2020-2022</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    In the last two years of high school, I chose this course. It taught me basic programming concepts, computer architecture, server management, and much more. It laid the foundation for me to become the programmer I am today.
                   </p>
                 </CardContent>
               </Card>

@@ -5,6 +5,10 @@ import { Badge } from '@/components/ui/badge';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogLayout from '@/components/BlogLayout';
+import lunchImage from "@/images/1748597262626.jpg";
+import conventionImage from "@/images/1748597262647.jpg";
+import panellumImage from "@/images/panellum.png";
+import demoImage from "@/images/image.png";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -25,6 +29,8 @@ const BlogPost = () => {
         Everything started off well. We worked at a steady pace and morale was high. This continued throughout the first half of the event. At around 12, the coaches told us that we could go to the main hall to enjoy a well-deserved lunch. There was a lunch buffet and we could enjoy some cold drinks. This was a really nice break from the coding that we did in the morning.
       </p>
       <br>
+      <img src=${lunchImage} />
+      <br>
       <p>
         We got back to work at around 12:30 am. Everything started off well as we continued with confidence. This quickly changed as things started to take a different turn. Some tools that we used decided to give us a hard time and we had to spend around one and a half hours fixing everything. This was very demotivating as we only had around 2 hours left to finish everything we planned.
       </p>
@@ -37,9 +43,15 @@ const BlogPost = () => {
         All of the teams pitched their project and we showed everything we had. We told our fellow colleagues that we had a lot of problems with our tools, which caused our lack of progress during the afternoon. The coaches thanked everyone for their efforts and we left the room to go back to the main hall.
       </p>
       <br>
+      <img src=${panellumImage} />
+      <br>
+      <img src=${demoImage} />
+      <br>
       <p>
         We gathered our belongings and settled down to enjoy some delicious food and some cold beverages. There were a lot of different food items that we got to eat and I was able to try a few new things. We saw the hosts go on the main stage again and they prepared the last part of the day: giving out the awards. The hosts showed the nominees for the awards and we were the first group they announced. Our hopes were at an all time high but we knew that the struggles we had faced might have cost us a lot of time.
       </p>
+      <br>
+      <img src=${conventionImage} />
       <br>
       <p>
         There were 2 categories: The public vote and the jury's vote. Unfortunately we didn't win any. We were supposed to vote on the 3 best teams and we ended up placing third.

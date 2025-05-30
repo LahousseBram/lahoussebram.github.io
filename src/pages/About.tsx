@@ -1,48 +1,21 @@
-
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Button } from '@/components/ui/button';
-import { Download, ExternalLink } from 'lucide-react';
+import { Download, ExternalLink, Trophy, Star, Rocket } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    { name: 'JavaScript', proficiency: 90 },
-    { name: 'React', proficiency: 85 },
-    { name: 'TypeScript', proficiency: 80 },
-    { name: 'Node.js', proficiency: 75 },
-    { name: 'Python', proficiency: 70 },
-    { name: 'Machine Learning', proficiency: 65 },
-    { name: 'HTML/CSS', proficiency: 90 },
-    { name: 'UI/UX Design', proficiency: 75 },
+    { name: 'Python', proficiency: 80 },
+    { name: 'Java', proficiency: 75 },
+    { name: 'Javascript', proficiency: 70 },
+    { name: 'PHP', proficiency: 50 },
+    { name: 'Flutter', proficiency: 50 },
+    { name: 'Typescript', proficiency: 50 },
   ];
 
-  const experiences = [
-    {
-      title: 'Software Engineering Intern',
-      company: 'Tech Company X',
-      duration: 'Summer 2024',
-      description: 'Worked on developing and maintaining web applications using React and Node.js. Implemented new features and fixed bugs in the codebase.',
-      technologies: ['React', 'Node.js', 'MongoDB']
-    },
-    {
-      title: 'Frontend Developer (Part-time)',
-      company: 'Startup Y',
-      duration: 'Jan 2024 - Present',
-      description: 'Developing responsive user interfaces for web applications. Collaborating with designers to implement pixel-perfect designs.',
-      technologies: ['Vue.js', 'TailwindCSS', 'JavaScript']
-    },
-    {
-      title: 'Research Assistant',
-      company: 'University Lab',
-      duration: 'Sept 2023 - Dec 2023',
-      description: 'Assisted in research on machine learning algorithms for natural language processing. Implemented and tested various models.',
-      technologies: ['Python', 'TensorFlow', 'NLP']
-    }
-  ];
-  
   return (
     <>
       <Navbar />
@@ -58,67 +31,80 @@ const About = () => {
               </p>
               <p className="text-lg text-muted-foreground mb-6">
                 My journey in tech began with simple HTML websites, and has grown into
-                a deep expertise in modern web frameworks, backend systems, and machine
-                learning applications. I'm constantly learning and experimenting with new
-                technologies to expand my skill set.
+                a proficiency in modern web frameworks, backend systems, and multi-environment applications. When I'm not coding, you can find me pondering my next personal project or working out.
               </p>
-              
-              <div className="flex flex-wrap gap-4 mt-8">
-                <Button className="gap-2">
-                  <Download className="size-4" /> Download Resume
-                </Button>
-                <Button variant="outline" className="gap-2">
-                  View Projects <ExternalLink className="size-4" />
-                </Button>
-              </div>
             </div>
-            
+
             <div className="mb-16">
-              <h2 className="text-2xl font-bold mb-6">Experience</h2>
-              <div className="space-y-8">
-                {experiences.map((exp, index) => (
-                  <Card key={index} className="glass-card">
-                    <CardContent className="pt-6">
-                      <div className="flex flex-wrap justify-between items-start gap-4 mb-3">
-                        <div>
-                          <h3 className="text-xl font-bold">{exp.title}</h3>
-                          <p className="text-muted-foreground">{exp.company}</p>
-                        </div>
-                        <Badge variant="outline">{exp.duration}</Badge>
-                      </div>
-                      <p className="mb-4">{exp.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech, i) => (
-                          <Badge key={i} variant="secondary">{tech}</Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+              <h2 className="text-2xl font-bold mb-6">Quick Stats</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <Card className="glass-card text-center">
+                  <CardHeader className="pb-2">
+                    <Trophy className="size-8 mx-auto text-primary" />
+                  </CardHeader>
+                  <CardContent>
+                    <h3 className="text-2xl font-bold">10+</h3>
+                    <p className="text-muted-foreground">Projects</p>
+                  </CardContent>
+                </Card>
+                <Card className="glass-card text-center">
+                  <CardHeader className="pb-2">
+                    <Star className="size-8 mx-auto text-primary" />
+                  </CardHeader>
+                  <CardContent>
+                    <h3 className="text-2xl font-bold">5+</h3>
+                    <p className="text-muted-foreground">Years Coding</p>
+                  </CardContent>
+                </Card>
+                <Card className="glass-card text-center">
+                  <CardHeader className="pb-2">
+                    <Rocket className="size-8 mx-auto text-primary" />
+                  </CardHeader>
+                  <CardContent>
+                    <h3 className="text-2xl font-bold">10+</h3>
+                    <p className="text-muted-foreground">Technologies</p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
             
             <div className="mb-16">
               <h2 className="text-2xl font-bold mb-6">Education</h2>
-              <Card className="glass-card">
-                <CardContent className="pt-6">
-                  <div className="flex flex-wrap justify-between items-start gap-4 mb-3">
-                    <div>
-                      <h3 className="text-xl font-bold">Bachelor of Computer Science</h3>
-                      <p className="text-muted-foreground">University Name</p>
+              <div className="space-y-6">
+                <Card className="glass-card">
+                  <CardHeader>
+                    <div className="flex flex-wrap justify-between items-start gap-4">
+                      <div>
+                        <CardTitle className="text-xl">Bachelor of Applied Computer Science</CardTitle>
+                        <CardDescription className="text-base">Howest</CardDescription>
+                      </div>
+                      <Badge variant="outline">2022-2025 (Present)</Badge>
                     </div>
-                    <Badge variant="outline">2021 - 2025</Badge>
-                  </div>
-                  <p className="mb-4">
-                    Specialized in software engineering with a focus on web development
-                    and machine learning. Graduating with honors.
-                  </p>
-                  <p className="text-muted-foreground">
-                    Relevant Coursework: Data Structures & Algorithms, Machine Learning, 
-                    Web Development, Database Systems, Operating Systems, Software Engineering
-                  </p>
-                </CardContent>
-              </Card>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Specialized in creating all kinds of software applications ranging from complex web apps to mobile apps.
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="glass-card">
+                  <CardHeader>
+                    <div className="flex flex-wrap justify-between items-start gap-4">
+                      <div>
+                        <CardTitle className="text-xl">IT Management</CardTitle>
+                        <CardDescription className="text-base">Sint-Jozefsinstituut/College</CardDescription>
+                      </div>
+                      <Badge variant="outline">2020-2022</Badge>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      In the last two years of high school, I chose this course. It taught me basic programming concepts, computer architecture, server management, and much more. It laid the foundation for me to become the programmer I am today.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
             
             <div>
@@ -127,7 +113,7 @@ const About = () => {
                 {skills.map((skill) => (
                   <div key={skill.name} className="space-y-2">
                     <div className="flex justify-between">
-                      <span className="font-medium">{skill.name}</span>
+                      <span className="font-mono">{skill.name}</span>
                       <span className="text-muted-foreground">{skill.proficiency}%</span>
                     </div>
                     <Progress value={skill.proficiency} className="h-2" />

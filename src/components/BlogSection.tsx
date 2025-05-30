@@ -8,28 +8,28 @@ import { Link } from 'react-router-dom';
 const BlogSection = () => {
   const blogPosts = [
     {
-      title: 'Building a Portfolio Website with React',
+      title: 'My Experience at Hack the Future 2024',
       excerpt: 'Learn how to create a modern portfolio website using React, TypeScript, and TailwindCSS.',
-      date: 'May 15, 2025',
-      readTime: '5 min read',
-      category: 'Web Development',
-      slug: 'building-portfolio-website'
-    },
-    {
-      title: 'Machine Learning Fundamentals',
-      excerpt: 'An introduction to machine learning concepts and how to implement your first ML model.',
-      date: 'May 10, 2025',
-      readTime: '8 min read',
-      category: 'Machine Learning',
-      slug: 'machine-learning-fundamentals'
-    },
-    {
-      title: 'The Future of Web Development',
-      excerpt: 'Exploring upcoming trends and technologies that will shape the future of web development.',
-      date: 'May 5, 2025',
+      date: 'November 19, 2024',
       readTime: '6 min read',
-      category: 'Technology',
-      slug: 'future-web-development'
+      category: 'Events',
+      slug: 'hack-the-future'
+    },
+    {
+      title: 'Attending a talk about the newest developments in .NET',
+      excerpt: 'What I learnt while listening to a C# and .NET developer at Starfisk',
+      date: 'October 29, 2024',
+      readTime: '4 min read',
+      category: 'Talks',
+      slug: 'dotnet-development'
+    },
+    {
+      title: 'Returning to my old secondary school to give a lesson about Python',
+      excerpt: 'Find out how a classmate and I returned to our secondary school and taught a class of last year students the Python basics.',
+      date: 'January 15, 2025',
+      readTime: '3 min read',
+      category: 'Talks',
+      slug: 'python-lesson'
     }
   ];
 

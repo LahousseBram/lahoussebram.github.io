@@ -11,8 +11,7 @@ const ProjectsSection = () => {
       description: 'This personal portfolio website built with React and TailwindCSS.',
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
       tags: ['React', 'TypeScript', 'TailwindCSS'],
-      github: 'https://github.com',
-      demo: 'https://demo.com'
+      demo: 'https://lahoussebram.github.io/'
     },
     {
       title: 'GoldAuctions platform',
@@ -20,14 +19,12 @@ const ProjectsSection = () => {
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
       tags: ['Java Spring', 'VueJS'],
       github: 'https://github.com/LahousseBram/GoldAuctions',
-      demo: 'https://github.com/LahousseBram/GoldAuctions'
     },
     {
       title: 'Powerlams website',
       description: "A website + advanced form system for my parent's business",
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
       tags: ['HTML+CSS', 'Javascript', 'PHP'],
-      github: 'https://github.com',
       demo: 'https://stroomgroepen-lams.be'
     }
   ];
@@ -57,10 +54,10 @@ const ProjectsSection = () => {
                   {project.title}
                   <div className="flex gap-2">
                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                      <Github className="size-5" />
+                      { project.github ? <Github className="size-5" /> : undefined}
                     </a>
                     <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                      <ArrowUpRight className="size-5" />
+                      {project.demo ? <ArrowUpRight className="size-5" /> : undefined}
                     </a>
                   </div>
                 </CardTitle>
@@ -75,12 +72,6 @@ const ProjectsSection = () => {
               </CardFooter>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <Button variant="outline" size="lg" className="gap-2">
-            View All Projects <ArrowUpRight className="size-4" />
-          </Button>
         </div>
       </div>
     </section>
