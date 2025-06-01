@@ -173,31 +173,31 @@ Defaulting to \`null\`.`}var Ag=Rg,Vb=Og;const jc=y.forwardRef(({className:e,val
       <h2>Why should I build a portfolio website you may ask.</h2>
       
       <p>
-        A well-designed portfolio website serves multiple purposes:
+        Well, a well-designed portfolio website serves multiple purposes:
       </p>
       
       <ul>
-        <li>Showcases your projects and skills to potential employers</li>
+        <li>Showcases your projects and skills to other people</li>
         <li>Demonstrates your coding abilities and attention to detail</li>
         <li>Provides a central hub for your online presence</li>
-        <li>Helps you stand out in a competitive job market</li>
+        <li>Helps you stand out in a competitive job/freelance market</li>
       </ul>
       
-      <h2>Setting Up Your React Project</h2>
+      <h2>Setting Up a React Project</h2>
       
       <p>
-        Begin by creating a new React project using Vite, which provides a faster and leaner development experience compared to Create React App:
+        Begin by creating a new React project using Vite, which provides a faster and leaner development experience compared to Create React App (You can continue with create react app but it will be different and I recommend just sticking to Vite):
       </p>
       
-      <pre><code>npm create vite@latest my-portfolio -- --template react-ts</code></pre>
+      <pre><code>npm create vite@latest portfolio -- --template react-ts</code></pre>
       
       <p>
         This command sets up a new React project with TypeScript support. After running this command, navigate to your project directory and install the necessary dependencies:
       </p>
       
       <pre><code>
-cd my-portfolio
-npm install
+        cd portfolio
+        npm install
       </code></pre>
       
       <h2>Adding TailwindCSS</h2>
@@ -207,8 +207,8 @@ npm install
       </p>
       
       <pre><code>
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+        npm install -D tailwindcss postcss autoprefixer
+        npx tailwindcss init -p
       </code></pre>
       
       <p>
@@ -216,16 +216,16 @@ npx tailwindcss init -p
       </p>
       
       <pre><code>
-module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+        module.exports = {
+          content: [
+            "./index.html",
+            "./src/**/*.{js,ts,jsx,tsx}",
+          ],
+          theme: {
+            extend: {},
+          },
+          plugins: [],
+        }
       </code></pre>
       
       <h2>Creating the Core Components</h2>
@@ -240,18 +240,17 @@ module.exports = {
         <li>Projects Section</li>
         <li>About Section</li>
         <li>Skills Section</li>
-        <li>Contact Form</li>
         <li>Footer</li>
       </ol>
       
       <h2>Adding Animations and Interactions</h2>
       
       <p>
-        To make your portfolio stand out, consider adding subtle animations:
+        To make your portfolio stand out, you can consider adding subtle animations:
       </p>
       
       <pre><code>
-npm install framer-motion
+        npm install framer-motion
       </code></pre>
       
       <p>
@@ -259,20 +258,20 @@ npm install framer-motion
       </p>
       
       <pre><code>
-import { motion } from 'framer-motion';
+        import { motion } from 'framer-motion';
 
-const ProjectCard = ({ project }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="card"
-    >
-      {/* Project content */}
-    </motion.div>
-  );
-};
+        const ProjectCard = ({ project }) => {
+          return (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="card"
+            >
+              {/* Project content */}
+            </motion.div>
+          );
+        };
       </code></pre>
       
       <h2>Optimization and Deployment</h2>
@@ -289,17 +288,13 @@ const ProjectCard = ({ project }) => {
       </ul>
       
       <p>
-        For deployment, consider platforms like Vercel, Netlify, or GitHub Pages, which offer free hosting for static websites with continuous deployment from your repository.
+        For deployment, consider platforms like Vercel, Netlify, or GitHub Pages, which offer free hosting for static websites with continuous deployment from your repository. I chose to go with Github Pages. One thing to note that instead of the classic BrowserRouter, you need to use the HashRouter. This is so Github Pages uses the client side router and not break on page refreshes.
       </p>
       
       <h2>Conclusion</h2>
       
       <p>
-        Building a portfolio website with React, TypeScript, and TailwindCSS gives you a powerful, flexible foundation to showcase your work. By following the steps outlined in this guide, you can create a professional, responsive portfolio that effectively demonstrates your skills and projects to potential employers or clients.
-      </p>
-      
-      <p>
-        Remember, your portfolio is an evolving project. Continuously update it with new projects, refine the design, and incorporate feedback to make it even better over time.
+        Building a portfolio website with React, TypeScript, and TailwindCSS gives you a powerful, flexible foundation to showcase your work. By following the steps in this guide, you can create a professional, responsive portfolio that effectively demonstrates your skills and projects to potential employers or clients or anyone interested in your work.
       </p>
     `};return c.jsxs(c.Fragment,{children:[c.jsx(Vn,{}),c.jsx("div",{className:"pt-24 pb-16",children:c.jsxs(Ss,{children:[c.jsxs("div",{className:"mb-6",children:[c.jsx(Nt,{variant:"outline",className:"text-primary border-primary/20 mb-4",children:e.category}),c.jsx("h1",{className:"text-3xl md:text-4xl lg:text-5xl font-bold mb-6",children:e.title}),c.jsxs("div",{className:"flex flex-wrap items-center gap-x-6 gap-y-3 text-muted-foreground mb-8",children:[c.jsxs("div",{className:"flex items-center gap-2",children:[c.jsx(vs,{className:"size-4"}),c.jsx("span",{children:e.author})]}),c.jsxs("div",{className:"flex items-center gap-2",children:[c.jsx(hr,{className:"size-4"}),c.jsx("span",{children:e.date})]}),c.jsxs("div",{className:"flex items-center gap-2",children:[c.jsx(mr,{className:"size-4"}),c.jsx("span",{children:e.readTime})]})]})]}),c.jsx("div",{className:"prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-h2:text-2xl prose-a:text-primary prose-pre:bg-secondary/50 prose-pre:rounded-lg",dangerouslySetInnerHTML:{__html:e.content}})]})}),c.jsx(Qn,{})]})},Xb=()=>{ws();const e={title:"Returning to my old secondary school to give a lesson about Python",date:"January 15, 2025",readTime:"3 min read",author:"Bram Lahousse",category:"Talks",content:`
       <p>
